@@ -72,6 +72,13 @@
   var ingredients = (r.ingredients || []).map(ingredientHtml).join('');
   var steps = (r.steps || []).map(stepHtml).join('');
 
+  // 前後どちらもなければ、区切り線だけが残らないように出さない
+  var nav = (newer || older)
+    ? '<nav class="detail__nav" aria-label="前後のレシピ">' +
+        navLinkHtml(newer, 'prev') + navLinkHtml(older, 'next') +
+      '</nav>'
+    : '';
+
   mount.innerHTML = '' +
     '<div class="detail__head">' +
       '<p class="detail__back mono"><a class="link" href="index.html">&larr; Index</a></p>' +
@@ -111,10 +118,7 @@
       '</section>' +
     '</div>' +
 
-    '<nav class="detail__nav" aria-label="前後のレシピ">' +
-      navLinkHtml(newer, 'prev') +
-      navLinkHtml(older, 'next') +
-    '</nav>';
+    nav;
 
   S.observeReveals(mount);
 })();
