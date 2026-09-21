@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="No photo">
+  <rect width="1200" height="900" fill="#eeeeea"/>
+  <g fill="none" stroke="#c9c9c1" stroke-width="3">
+    <circle cx="600" cy="450" r="190"/>
+    <circle cx="600" cy="450" r="140" stroke-dasharray="6 10"/>
+  </g>
+  <g font-family="Courier New, monospace" font-size="24" letter-spacing="6" fill="#a5a59d" text-anchor="middle">
+    <text x="600" y="462">NO PHOTO</text>
+  </g>
+</svg>

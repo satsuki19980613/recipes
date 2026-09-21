@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="親子丼">
+  <rect width="1200" height="900" fill="#e6e0d2"/>
+  <circle cx="600" cy="450" r="336" fill="#2f3a44"/>
+  <circle cx="600" cy="450" r="300" fill="#f7f3e6"/>
+  <circle cx="600" cy="450" r="286" fill="#f2c95c"/>
+  <g fill="#e8b23c">
+    <path d="M420 430 q70 -60 150 -30 q-60 70 -150 30z"/>
+    <path d="M620 350 q80 -40 150 20 q-90 50 -150 -20z"/>
+    <path d="M470 560 q90 -50 160 10 q-96 48 -160 -10z"/>
+    <path d="M640 520 q80 -30 140 26 q-86 36 -140 -26z"/>
+  </g>
+  <g fill="#fdf6e0" opacity="0.85">
+    <path d="M500 400 q46 -30 92 -6 q-44 40 -92 6z"/>
+    <path d="M652 470 q44 -26 86 -2 q-42 36 -86 2z"/>
+    <path d="M520 512 q40 -24 78 -2 q-38 32 -78 2z"/>
+  </g>
+  <g fill="#c98a3c">
+    <ellipse cx="560" cy="460" rx="54" ry="38" transform="rotate(-14 560 460)"/>
+    <ellipse cx="672" cy="412" rx="46" ry="32" transform="rotate(20 672 412)"/>
+    <ellipse cx="610" cy="566" rx="48" ry="34" transform="rotate(8 610 566)"/>
+  </g>
+  <g stroke="#44803c" stroke-width="8" stroke-linecap="round" fill="none">
+    <path d="M540 350 q40 30 26 78"/>
+    <path d="M700 560 q-34 26 -60 14"/>
+    <path d="M462 500 q34 24 32 60"/>
+  </g>
+  <circle cx="600" cy="450" r="300" fill="none" stroke="#2f3a44" stroke-width="14"/>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="肉じゃが">
+  <rect width="1200" height="900" fill="#e8e2d6"/>
+  <circle cx="600" cy="450" r="330" fill="#f4efe6"/>
+  <circle cx="600" cy="450" r="300" fill="#cfa06a"/>
+  <circle cx="600" cy="450" r="282" fill="#b8814b"/>
+  <g>
+    <circle cx="500" cy="380" r="78" fill="#f0d99a"/>
+    <circle cx="668" cy="360" r="62" fill="#ecd08a"/>
+    <circle cx="700" cy="520" r="70" fill="#f0d99a"/>
+    <path d="M470 520 l90 -30 20 60 -92 28z" fill="#d4622a"/>
+    <path d="M560 560 l84 -22 12 56 -86 22z" fill="#c7551f"/>
+    <path d="M430 450 q60 -40 120 -8 q-56 44 -120 8z" fill="#7a4326"/>
+    <path d="M600 300 q70 -34 128 6 q-64 40 -128 -6z" fill="#8a4c2b"/>
+    <path d="M540 470 q80 -26 140 20 q-84 30 -140 -20z" fill="#6d3a20"/>
+  </g>
+  <g stroke="#3f7a3a" stroke-width="9" stroke-linecap="round" fill="none" opacity="0.85">
+    <path d="M636 606 q34 -22 70 -10"/>
+    <path d="M520 296 q30 -20 64 -12"/>
+  </g>
+  <circle cx="600" cy="450" r="300" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="10"/>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="麻婆豆腐">
+  <rect width="1200" height="900" fill="#26201d"/>
+  <circle cx="600" cy="450" r="332" fill="#efe9e2"/>
+  <circle cx="600" cy="450" r="298" fill="#a8301d"/>
+  <circle cx="600" cy="450" r="280" fill="#8e2414"/>
+  <g fill="#f5efe2">
+    <rect x="470" y="352" width="96" height="96" rx="6" transform="rotate(-8 518 400)"/>
+    <rect x="618" y="336" width="86" height="86" rx="6" transform="rotate(12 661 379)"/>
+    <rect x="536" y="476" width="100" height="100" rx="6" transform="rotate(5 586 526)"/>
+    <rect x="676" y="486" width="80" height="80" rx="6" transform="rotate(-14 716 526)"/>
+    <rect x="430" y="470" width="74" height="74" rx="6" transform="rotate(18 467 507)"/>
+  </g>
+  <g fill="#4a1c10" opacity="0.9">
+    <circle cx="520" cy="452" r="12"/><circle cx="592" cy="404" r="10"/>
+    <circle cx="660" cy="462" r="13"/><circle cx="486" cy="404" r="9"/>
+    <circle cx="700" cy="410" r="11"/><circle cx="560" cy="584" r="10"/>
+    <circle cx="640" cy="560" r="12"/><circle cx="468" cy="556" r="9"/>
+  </g>
+  <g stroke="#57a04a" stroke-width="10" stroke-linecap="round">
+    <path d="M556 330 h58"/><path d="M690 588 h54"/><path d="M448 610 h48"/>
+  </g>
+  <circle cx="600" cy="450" r="298" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="10"/>
+</svg>
