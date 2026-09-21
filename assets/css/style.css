@@ -101,7 +101,7 @@ a.pill:hover, button.pill:hover { border-color: var(--ink); color: var(--ink); }
 }
 
 /* 日本語の本文は文節で折り返す */
-.hero__lede, .strip p, .detail__lede, .step p, .notes p, .field .hint {
+.detail__lede, .step p, .notes p, .field .hint {
   line-break: strict;
   word-break: auto-phrase;
 }
@@ -198,13 +198,11 @@ a.pill:hover, button.pill:hover { border-color: var(--ink); color: var(--ink); }
   text-indent: 0.1em;
 }
 .hero__lede {
-  max-width: 46ch;
-  font-size: clamp(0.9rem, 1.6vw, 1.0625rem);
-  line-height: 1.95;
+  font-size: clamp(0.8125rem, 1.5vw, 1rem);
+  letter-spacing: 0.22em;
+  text-indent: 0.22em;
   color: var(--ink-soft);
-  text-wrap: balance;
 }
-.hero__pills { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
 
 .scroll-cue {
   position: absolute; left: 50%; bottom: 2rem;
@@ -344,20 +342,6 @@ a.pill:hover, button.pill:hover { border-color: var(--ink); color: var(--ink); }
   text-align: center;
   font-family: var(--font-mono); font-size: 0.8125rem; color: var(--muted);
 }
-
-/* =========================================================
-   about strip
-   ========================================================= */
-.strip { border-block: 1px solid var(--line); padding-block: clamp(3rem, 7vw, 6rem); }
-.strip__inner { display: grid; gap: clamp(1.5rem, 4vw, 4rem); }
-@media (min-width: 900px) { .strip__inner { grid-template-columns: 20ch minmax(0, 1fr); } }
-.strip h2 {
-  font-size: clamp(1.4rem, 2.6vw, 2rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.25;
-}
-.strip p { max-width: 62ch; color: var(--ink-soft); line-height: 2; }
-.stats { display: flex; flex-wrap: wrap; gap: 2.5rem; margin-top: 2.5rem; }
-.stat b { display: block; font-size: clamp(1.75rem, 4vw, 3rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1; }
-.stat span { font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
 
 /* =========================================================
    footer

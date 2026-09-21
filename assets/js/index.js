@@ -123,18 +123,7 @@
   var savedView = 'img';
   try { savedView = localStorage.getItem('view') || 'img'; } catch (e) {}
 
-  /* ---------- About の数値 ---------- */
-  function renderStats() {
-    var count = document.getElementById('statCount');
-    var cats = document.getElementById('statCats');
-    var latest = document.getElementById('statLatest');
-    if (count) count.textContent = String(total).padStart(2, '0');
-    if (cats) cats.textContent = String(categories().length).padStart(2, '0');
-    if (latest) latest.textContent = total ? S.formatDate(recipes[0].date) : '—';
-  }
-
   renderFilters();
   renderArchive();
   setView(savedView);
-  renderStats();
 })();
