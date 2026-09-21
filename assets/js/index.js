@@ -83,8 +83,7 @@
     });
 
     if (!list.length) {
-      archive.innerHTML = '<p class="empty">まだレシピがありません。' +
-        '<a class="link" href="admin.html">投稿フォーム</a>から追加してください。</p>';
+      archive.innerHTML = '<p class="empty">まだレシピがありません。</p>';
       return;
     }
 

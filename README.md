@@ -1,6 +1,6 @@
 # RECIPES
 
-つくったごはんを時系列で残していく、個人のレシピアーカイブ。
+作ったご飯の備忘録。つくった順に並ぶ、個人用のレシピ記録。
 静的な HTML / CSS / JavaScript だけで動き、GitHub Pages にそのまま置けます。
 
 公開URL: https://satsuki19980613.github.io/recipes/
@@ -13,14 +13,12 @@
 .
 ├── index.html            トップ（時系列の一覧・年ごとにまとまる）
 ├── recipe.html           レシピ詳細（?id=... で切り替わる）
-├── admin.html            投稿フォーム（GUI）
 ├── assets/
 │   ├── css/style.css     デザイン一式
 │   └── js/
 │       ├── site.js       共通（テーマ・日付整形・スクロール表示）
 │       ├── index.js      一覧の描画・絞り込み・Txt / Img 切り替え
-│       ├── recipe.js     詳細の描画
-│       └── admin.js      投稿フォームと recipes.js の書き出し
+│       └── recipe.js     詳細の描画
 ├── data/recipes.js       レシピデータ（ここだけが唯一のデータ）
 └── images/               料理写真
 ```
@@ -32,21 +30,8 @@
 
 ## レシピを追加する
 
-### 1. 投稿フォームを使う（おすすめ）
-
-1. サイトの **Post**（`admin.html`）を開く
-2. 料理名・日付・材料・手順を入力する。右側にカードの見え方が出る
-3. 写真を選ぶと長辺 1600px の JPEG に変換される。**「写真を保存」** で書き出す
-4. **「recipes.js を書き出す」** を押す
-5. 書き出した `recipes.js` で `data/recipes.js` を置き換え、写真を `images/` に入れる
-6. コミットして push すると、1〜2 分でサイトに反映される
-
-入力内容はブラウザに自動保存されるので、途中で閉じても続きから書けます。
-同じ ID のレシピがすでにあるときは、書き出し時に置き換わります（＝編集にも使えます）。
-
-### 2. 直接書く
-
-`data/recipes.js` の配列に追加します。並び順は気にしなくて大丈夫です
+`data/recipes.js` の配列に 1 件足して、写真を `images/` に置き、
+コミットして push すれば 1〜2 分でサイトに反映されます。並び順は気にしなくて大丈夫です
 （`date` を見てサイト側が新しい順に並べ替えます）。
 
 ```js
@@ -113,9 +98,19 @@ python -m http.server 8000
 
 ---
 
+## 写真について
+
+長辺 1600px くらいの JPEG にしておくと表示が速くなります。
+スマホの写真は EXIF に回転情報が入っていることがあるので、
+向きを焼き込んでから置いてください。
+
+```bash
+python -c "from PIL import Image, ImageOps; im=ImageOps.exif_transpose(Image.open('in.jpg')).convert('RGB'); im.thumbnail((1600,1600), Image.LANCZOS); im.save('out.jpg','JPEG',quality=82,optimize=True)"
+```
+
+---
+
 ## これから
 
-- [ ] 投稿フォームから GitHub に直接コミットする（Personal Access Token または GitHub Actions）
 - [ ] タグでの絞り込み
-- [ ] 手順ごとの写真をフォームから登録する
 - [ ] 検索
