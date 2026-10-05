@@ -20,7 +20,9 @@
 │       ├── index.js      一覧の描画・絞り込み・Txt / Img 切り替え
 │       └── recipe.js     詳細の描画
 ├── data/recipes.js       レシピデータ（ここだけが唯一のデータ）
-└── images/               料理写真
+├── images/               サイトが表示する写真（縮小済み）
+└── originals/            元写真の保管庫（サイトからは参照しない）
+    └── <レシピのid>/      1.jpg, 2.jpg ... は手順番号に対応
 ```
 
 ページは `data/recipes.js` を読んで描画します。
@@ -100,13 +102,23 @@ python -m http.server 8000
 
 ## 写真について
 
-長辺 1600px くらいの JPEG にしておくと表示が速くなります。
-スマホの写真は EXIF に回転情報が入っていることがあるので、
-向きを焼き込んでから置いてください。
+写真は 2 か所に置きます。
+
+- `originals/<レシピのid>/` … カメラから出したままの元写真。保管用で、サイトは読みません
+- `images/<レシピのid>-N.jpg` … サイトが表示する縮小版
+
+縮小版は長辺 1600px・画質 82 の JPEG です。スマホの写真は EXIF に
+回転情報が入っていて向きが崩れることがあるので、向きを焼き込んで
+から保存します（同時に EXIF も落ちます）。
 
 ```bash
-python -c "from PIL import Image, ImageOps; im=ImageOps.exif_transpose(Image.open('in.jpg')).convert('RGB'); im.thumbnail((1600,1600), Image.LANCZOS); im.save('out.jpg','JPEG',quality=82,optimize=True)"
+python -c "from PIL import Image, ImageOps; im=ImageOps.exif_transpose(Image.open('originals/<id>/1.jpg')).convert('RGB'); im.thumbnail((1600,1600), Image.LANCZOS); im.save('images/<id>-1.jpg','JPEG',quality=82,optimize=True,progressive=True)"
 ```
+
+元写真も含めて 1 レシピあたり約 10MB です。GitHub Pages の目安は
+サイト全体で 1GB なので、100 レシピ程度までは余裕があります。
+元写真を増やしたくなくなったら `originals/` ごと消しても、
+サイトの表示には影響しません。
 
 ---
 
