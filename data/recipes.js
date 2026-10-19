@@ -39,7 +39,7 @@ window.RECIPES = [
     ingredients: [
       { name: "◎ フォカッチャ", amount: "" },
       { name: "強力粉", amount: "560g" },
-      { name: "温水（40℃くらい）", amount: "適量" },
+      { name: "温水（40℃くらい）", amount: "470g" },
       { name: "ドライイースト", amount: "7g" },
       { name: "エキストラバージンオリーブオイル", amount: "14g" },
       { name: "塩", amount: "12g" },
